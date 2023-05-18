@@ -38,15 +38,36 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
+      // create a const with the filteredInventors
+      // How Array.filter() works: It takes an array, pass it through a "peneira" and return only the ones who passed the test.inventor["year"] >= 1500 && inventor["year"] < 1600
+   
+    const filteredInventors = inventors.filter( inventor => (inventor["year"] >= 1500 && inventor["year"] < 1600));
+
+    console.table(filteredInventors);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
+      // create a const to store the new array.
+      // create some logic to goes throught each array element, and return only `inventor.first inventor.last`
+
+    const fullNamesArray = inventors.map( (inventor) => {
+      return `${inventor.first} ${inventor.last}`;
+    } )
+
+    console.table(fullNamesArray);
+
+// ############################################################# 3.
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+      // create a new Array: inventorsSortedByBirthdate
+    const inventorsSortedByBirthdate = inventors.sort( (first, second) => first.year > second.year ? 1 : -1 );
+    console.table(inventorsSortedByBirthdate);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+          // How reduce works: It takes all array elements and reduce it to a single result.
+          // arrayName.reduce(totalYears, inventor, 0 )
 
     // 5. Sort the inventors by years lived
 
