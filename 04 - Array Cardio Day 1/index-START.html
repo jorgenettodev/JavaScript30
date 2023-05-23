@@ -99,10 +99,30 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    
+    // input: people Array
+    // processing: sort the the goddamn array
+      // turn each array element to variables
+    
+    const sortedPeople = people.sort((a,b) => {
+      const [aLastName, aFirstName] = a.split(', ');
+      const [bLastName, bFirstName] = b.split(', ');
+      
+      return (aLastName > bLastName) ? 1 : -1;
+      
+      
+     
+    });
+    console.table(sortedPeople);
+
+    // output: a new array of the people sorted by last name
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+    // input: array de instâncias de transportes.
+    // output: car: 3, truck: 2 etc. Quero retornar um objeto que mostre quantas vezes cada item se repetiu.
 
   </script>
 </body>
