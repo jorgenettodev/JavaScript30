@@ -119,9 +119,28 @@
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'patinete' ];
+
+
 
     // input: array de instâncias de transportes.
+    const transportation = data.reduce((accumulator, obj) => {
+      if (!accumulator[obj]) {
+        accumulator[obj] = 1;
+      } else {
+        accumulator[obj]++
+      }
+    return accumulator;
+    },
+    {})
+    console.table(transportation);
+    // processing: fazer uma const que vai guardar os valores de cada instância. Vai ser baseada no Array.protype.reduce(). Este reduce vai receber um objeto vazio; o elemento atual.
+      // na função reduce, vou fazer uma verificaçao
+        // Se (elemento não existe) {
+          // criar elemento
+        // } Senao {
+          // elemento++
+        //}
     // output: car: 3, truck: 2 etc. Quero retornar um objeto que mostre quantas vezes cada item se repetiu.
 
   </script>
